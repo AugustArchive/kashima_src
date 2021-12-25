@@ -1,0 +1,14 @@
+// Credit: https://stackoverflow.com/questions/49070926/i-want-to-create-a-small-square-colour-filled-box-in-html-css-and-most-import
+@import '../constants/variables';
+
+.user-box {
+  margin-bottom: 15px;
+  position: relative;
+  border: 1px solid $dark;
+  height: 30px;
+  float: left;
+  width: 30px;
+  clear: both;
+  right: -75%;
+  top: 25px;
+}

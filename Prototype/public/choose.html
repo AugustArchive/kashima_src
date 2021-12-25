@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='css/style.css' />
+  </head>
+  <body>
+    <div id='root'></div>
+    <script>
+      var exports = { __esModule: true };
+      require('module').Module.globalPaths.push(require('path').resolve(__dirname, '..', 'dist', 'commons'));
+    </script>
+    <script src='./app/index.js'></script>
+  </body>
+</html>

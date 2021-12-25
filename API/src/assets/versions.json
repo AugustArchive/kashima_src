@@ -1,0 +1,18 @@
+{
+  "extension": {
+    "version": "1.0.0",
+    "commitHash": "46a7ae262f2e117486aad8e6fe2ab988db521400"
+  },
+  "website": {
+    "version": "1.0.0",
+    "commitHash": "9b7157fd4b8c98aecdf31e4ba3d044d079b18bbc"
+  },
+  "desktop-app": {
+    "version": "1.0.0",
+    "commitHash": "1957154484f5e14d0ecdd17ff5a296f99a96cf60"
+  },
+  "mobile-app": {
+    "version": "1.0.0",
+    "commitHash": "58f450242f719bedd24227b34e8a09ea1f931f23"
+  }
+}

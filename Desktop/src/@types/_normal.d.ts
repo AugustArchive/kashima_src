@@ -1,0 +1,1 @@
+export type LogFunc = (level: 'info' | 'error' | 'warn' | 'debug', ...message: any[]) => void;

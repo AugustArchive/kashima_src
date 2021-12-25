@@ -1,0 +1,27 @@
+{
+  "name": "@kashima-org/installer",
+  "description": "🛀 Simple and intuitive installation core for Kashima",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "types": "index.d.ts",
+  "author": "Kashima Team",
+  "repository": "https://github.com/kashima-org/installer-core",
+  "scripts": {
+    "build": "yarn lint && rm -fr build && tsc",
+    "lint": "eslint src --ext .ts --fix"
+  },
+  "dependencies": {
+    "@augu/immutable": "0.2.2",
+    "@augu/orchid": "1.0.0",
+    "@kashima-org/tar": "1.0.2"
+  },
+  "devDependencies": {
+    "@augu/eslint-config": "1.5.2",
+    "@types/node": "14.0.1",
+    "@typescript-eslint/eslint-plugin": "2.33.0",
+    "@typescript-eslint/parser": "2.33.0",
+    "eslint": "7.0.0",
+    "perf_hooks": "^0.0.1",
+    "typescript": "3.9.2"
+  }
+}

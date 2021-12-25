@@ -1,0 +1,7 @@
+{
+  "commitHash": "{{hash}}",
+  "version": "{{version}}",
+  "nodeEnv": "development",
+  "date": "{{date}}",
+  "type": "alpha"
+}

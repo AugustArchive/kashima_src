@@ -1,0 +1,10 @@
+.next/
+node_modules/
+resources/
+build/
+icons/
+dist/
+.env
+
+package-lock.json
+yarn.lock

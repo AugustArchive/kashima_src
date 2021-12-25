@@ -1,0 +1,31 @@
+// Credit: https://codepen.io/davidelrizzo/pen/eJwqzp
+@import '../constants/variables';
+
+table.audio-list {
+  flex-wrap: wrap;
+  display: flex;
+  padding: 0;
+  margin: 0 0 3em 0;
+}
+
+tr.cell {
+  background: $more-dark;
+  box-sizing: border-box;
+  list-style: none;
+  flex-grow: 1;
+  overflow: hidden;
+  padding: 0.8em 1.2em;
+  width: 100%;
+
+  :hover {
+    background-color: $greyish;
+  }
+}
+
+tr.cell > td.cell-text {
+  margin: 0;
+}
+
+.audio-list > .cell {
+  width: 20%;
+}

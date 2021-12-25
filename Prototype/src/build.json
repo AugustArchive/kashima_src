@@ -1,0 +1,6 @@
+{
+  "commitHash": null,
+  "version": "{{version}}",
+  "nodeEnv": "development",
+  "mode": "pre-alpha"
+}

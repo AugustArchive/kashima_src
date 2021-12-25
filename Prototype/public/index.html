@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='css/style.css' />
+  </head>
+  <body>
+    <div id='root'></div>
+    <script>
+      // Export "__esModule"
+      var exports = { __esModule: true };
+
+      // Add the commons library
+      require('module').Module.globalPaths.push(require('path').resolve(__dirname, '..', 'dist', 'commons'));
+      
+      // Polyfill the core global values, logger, and audio extensions
+      require('../dist/polyfills/Core');
+      require('../dist/polyfills/Audio');
+      require('../dist/polyfills/Logger');
+    </script>
+    <script src='./app/index.js'></script>
+  </body>
+</html>

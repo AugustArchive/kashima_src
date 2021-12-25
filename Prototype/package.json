@@ -1,0 +1,90 @@
+{
+  "name": "@kashima/prototype",
+  "description": "🎯 Reference template for the final product",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "author": "LiquidBlast <contact@kashima.space>",
+  "maintainers": [
+    {
+      "name": "Chris H (August)",
+      "email": "august@augu.dev",
+      "url": "https://augu.dev",
+      "role": "Lead Developer"
+    },
+    {
+      "name": "David Ralph (ohlookitsderpy)",
+      "email": "contact@davidralph.me",
+      "url": "https://derpyenterprises.org",
+      "role": "Frontend Developer"
+    },
+    {
+      "name": "Alex Sparkes (Mello)",
+      "email": "alexsparkes@gmail.com",
+      "url": "https://github.com/TurboMarshmello",
+      "role": "Frontend Developer"
+    }
+  ],
+  "scripts": {
+    "build:watch": "yarn lint && yarn sass && yarn clean && tsc -w",
+    "compile": "tsc && echo \"Compiled TypeScript\"",
+    "deploy": "electron-builder --win --linux",
+    "build": "yarn lint && yarn sass && yarn clean && yarn compile && yarn move",
+    "start": "electron .",
+    "clean": "rm -fr dist && rm -fr public/app",
+    "lint": "eslint src --ext .ts --fix",
+    "move": "cp src/build.json dist/build.json && mv dist/app public/app",
+    "sass": "sass public/scss:public/css --no-source-map"
+  },
+  "dependencies": {
+    "@augu/ichigo": "1.2.1",
+    "@augu/immutable": "0.2.0",
+    "leeks.js": "0.0.8",
+    "music-metadata": "6.3.7",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "semver": "7.2.1",
+    "tar": "6.0.1"
+  },
+  "devDependencies": {
+    "@augu/eslint-config": "1.4.0",
+    "@fortawesome/fontawesome-svg-core": "1.2.28",
+    "@fortawesome/free-solid-svg-icons": "5.13.0",
+    "@fortawesome/react-fontawesome": "0.1.9",
+    "@kashima-org/wslib": "1.1.0",
+    "@types/node": "13.11.0",
+    "@types/sass": "1.16.0",
+    "@types/semver": "7.1.0",
+    "@types/tar": "4.0.3",
+    "@typescript-eslint/eslint-plugin": "2.27.0",
+    "@typescript-eslint/parser": "2.27.0",
+    "electron": "8.2.2",
+    "electron-builder": "22.4.1",
+    "eslint": "6.8.0",
+    "rimraf": "3.0.2",
+    "sass": "1.26.3",
+    "typescript": "3.8.3"
+  },
+  "build": {
+    "appId": "app.kashima.desktop",
+    "asar": true,
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "icon": "./icons/icon.ico",
+      "target": "nsis",
+      "publisherName": "LiquidBlast"
+    },
+    "linux": {
+      "icon": "./icons/icon.ico",
+      "category": "Audio",
+      "vendor": "LiquidBlast",
+      "target": [
+        "deb",
+        "rpm",
+        "tar.gz"
+      ]
+    }
+  }
+}

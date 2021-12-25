@@ -1,0 +1,76 @@
+// Credit: https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp
+
+@import '../constants/variables';
+
+.left-sidebar {
+  background-color: $dark;
+  overflow-x: hidden;
+  padding-top: 20px;
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  width: 16px;
+  left: 0;
+  top: 0;
+
+  a {
+    text-decoration: none;
+    font-size: 25px;
+    padding: 6px 8px 6px 16px;
+    display: block;
+    color: $primary;
+  }
+
+  a:hover {
+    color: #555555;
+  }
+}
+
+.right-sidebar {
+  background-color: $dark;
+  overflow-x: hidden;
+  padding-top: 20px;
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  width: 16px;
+  right: 0;
+  top: 0;
+
+  a {
+    text-decoration: none;
+    font-size: 25px;
+    padding: 6px 8px 6px 16px;
+    display: block;
+    color: $primary;
+  }
+
+  a:hover {
+    color: #555555;
+  }
+}
+
+.main {
+  margin-right: 160px;
+  margin-left: 160px;
+  font-size: 28px;
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .right-sidebar {
+    padding-top: 15px;
+
+    a {
+      font-size: 18px;
+    }
+  }
+
+  .left-sidebar {
+    padding-top: 15px;
+
+    a {
+      font-size: 18px;
+    }
+  }
+}

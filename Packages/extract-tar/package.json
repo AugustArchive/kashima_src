@@ -1,0 +1,29 @@
+{
+  "name": "@kashima-org/tar",
+  "description": "📤 Utility class to create or extract tars",
+  "version": "1.1.0",
+  "main": "build/index.js",
+  "author": "August <august@augu.dev>",
+  "homepage": "https://docs.kashima.app/libraries/tar",
+  "files": ["build", "index.d.ts"],
+  "types": "index.d.ts",
+  "scripts": {
+    "prepare": "yarn build",
+    "build": "yarn lint && yarn clean && tsc",
+    "clean": "rm -fr dist",
+    "lint": "eslint src --ext .ts --fix"
+  },
+  "dependencies": {
+    "@augu/orchid": "1.0.0",
+    "tar": "6.0.2"
+  },
+  "devDependencies": {
+    "@augu/eslint-config": "1.5.2",
+    "@types/node": "14.0.1",
+    "@types/tar": "4.0.3",
+    "@typescript-eslint/eslint-plugin": "2.33.0",
+    "@typescript-eslint/parser": "2.33.0",
+    "eslint": "7.0.0",
+    "typescript": "3.9.2"
+  }
+}

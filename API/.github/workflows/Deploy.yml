@@ -1,0 +1,33 @@
+name: Deploy the production build
+on: [push]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+      - name: Setup Node.js v13
+        uses: actions/setup-node@v1
+        with:
+          node-version: 13.x
+      - name: Install all global dependencies
+        run: npm i -g eslint jest
+      - name: Install all local dependencies
+        run: npm i
+      - name: Lint the repository
+        run: npm run lint
+      - name: Run all tests with Jest
+        run: npm run test
+      - name: Deploy to main server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: august
+          password: ${{ secrets.PASSWORD }}
+          port: 22
+          script: |
+            cd kashima-api
+            git pull
+            rm -fr node_modules && rm yarn.lock
+            yarn
+            pm2 restart "kashima-api"

@@ -1,0 +1,16 @@
+{
+  "name": "@kashima/docs",
+  "description": "✏️ Documentation site for Kashima",
+  "private": true,
+  "version": "1.0.0",
+  "author": "August <august@augu.dev>",
+  "homepage": "https://docs.kashima.app",
+  "bugs": "https://github.com/kashima-org/docs/issues",
+  "scripts": {
+    "build": "vuepress build docs",
+    "dev": "vuepress dev docs"
+  },
+  "devDependencies": {
+    "vuepress": "1.4.1"
+  }
+}

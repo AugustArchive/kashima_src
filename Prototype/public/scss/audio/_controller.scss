@@ -1,0 +1,47 @@
+// Credit: https://stackoverflow.com/questions/29069498/how-to-make-a-sticky-footer-using-css
+@import '../constants/variables';
+
+.controller {
+  background-color: $dark;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  left: 0;
+}
+
+.controller-left {
+  bottom: 25px;
+  right: 35px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  -webkit-transform: .2s;
+  background: $greyish;
+  transform: opacity .2s;
+  outline: none;
+  height: 25px;
+  width: 100%;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: $bluey;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+}
+
+.slider::-moz-range-thumb {
+  background: $bluey;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+}

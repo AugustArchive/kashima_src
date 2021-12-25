@@ -1,0 +1,9 @@
+{
+  "extends": ["@augu/eslint-config/ts.js", "@augu/eslint-config/react.js"],
+  "rules": {
+    "@typescript-eslint/brace-style": "off"
+  },
+  "settings": {
+    "version": "detect"
+  }
+}

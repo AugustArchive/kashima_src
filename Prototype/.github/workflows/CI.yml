@@ -1,0 +1,21 @@
+name: Node.js CI
+on: [pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 13.x]
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+      - name: Use Node.js v${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install global dependencies
+        uses: npm i -g eslint
+      - name: Install project dependencies
+        uses: npm i
+      - name: Lint the repository (check for miscellaneous code errors)
+        uses: eslint src --ext .ts --fix

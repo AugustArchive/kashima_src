@@ -1,0 +1,59 @@
+// Credit: https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
+@import '../constants/variables';
+
+.navbar {
+  background-color: $primary;
+  overflow: hidden;
+
+  a.item {
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    padding: 14px 16px;
+    color: white;
+    float: left;
+  }
+}
+
+.dropdown {
+  overflow: hidden;
+  float: left;
+
+  .btn {
+    background-color: inherit;
+    font-family: inherit;
+    font-size: 16px;
+    outline: none;
+    padding: 14px 16px;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    color: white;
+  }
+
+  .content {
+    background-color: $primary;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    max-width: 160px;
+    position: absolute;
+    display: none;
+    z-index: 1;
+
+    a {
+      text-decoration: none;
+      text-align: left;
+      padding: 12px 16px;
+      display: block;
+      color: $grey;
+      float: none;
+    }
+
+    a:hover {
+      background-color: $greyish;
+    }
+  }
+}
+
+.show {
+  display: block;
+}

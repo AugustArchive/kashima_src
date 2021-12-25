@@ -1,0 +1,19 @@
+{
+  "name": "@kashima/ext-ui",
+  "description": "UI for the Browser extension made with Vue.js",
+  "version": "1.0.0",
+  "private": true,
+  "author": "LiquidBlast <contact@kashima.app>",
+  "license": "Custom",
+  "scripts": {
+    "build": "yarn lint && cross-env NODE_ENV=production webpack --hide-modules",
+    "lint": "eslint src --ext .ts,.vue --fix",
+    "dev": "yarn lint && cross-env NODE_ENV=development webpack --hide-modules --watch"
+  },
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+
+  }
+}

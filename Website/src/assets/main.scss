@@ -1,0 +1,91 @@
+@import '~bulma/sass/utilities/_all';
+@import url('https://fonts.googleapis.com/css?family=Muli|Pacifico&display=swap');
+
+$primary: #777777;
+$primary-invert: findColorInvert($primary);
+$twitter: #1DA1F2;
+$twitter-invert: findColorInvert($twitter);
+$grey-not-darkest: #5E5E5E;
+$not-quite-dark: #2B2B2B;
+$grey-not-darkest-invert: findColorInvert($grey-not-darkest);
+$discord: #7289DA;
+$discord-invert: findColorInvert($discord);
+$liquidblast: #EF2D2D;
+$liquidblast-invert: findColorInvert($liquidblast);
+
+$colors: (
+  "white": ($white, $black),
+  "black": ($black, $white),
+  "light": ($light, $light-invert),
+  "dark": ($dark, $dark-invert),
+  "primary": ($primary, $primary-invert),
+  "info": ($info, $info-invert),
+  "success": ($success, $success-invert),
+  "warning": ($warning, $warning-invert),
+  "danger": ($danger, $danger-invert),
+  "twitter": ($twitter, $twitter-invert),
+  "grey": ($grey-not-darkest, $grey-not-darkest-invert),
+  "discord": ($discord, $discord-invert),
+  "lb": ($liquidblast, $liquidblast-invert)
+);
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+// Navbar
+$navbar-item-active-background-color: $not-quite-dark;
+$navbar-item-hover-background-color: $not-quite-dark;
+$navbar-background-color: $grey-not-darkest;
+$navbar-item-color: $white;
+
+$navbar-dropdown-item-active-background-color: $primary;
+$navbar-dropdown-background-color: $not-quite-dark;
+$navbar-dropdown-item-hover-color: $primary;
+$navbar-divider-background-color: $primary;
+$navbar-dropdown-item-color: $white;
+
+// Boxes
+$box-background-color: $grey-not-darkest;
+
+// Footer
+$footer-background-color: $grey-not-darkest;
+$footer-color: white;
+
+// Fonts
+$pacifico: 'Pacifico';
+$muli: 'Muli';
+
+// Import Bulma, Buefy styles, and Fonts
+@import '~bulma';
+@import '~buefy/src/scss/buefy';
+
+// Edit global styling
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+// Miscellaneous stuff
+::selection {
+  background: lighten($primary, 5%);
+  color: $primary-invert;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+.label {
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+}
