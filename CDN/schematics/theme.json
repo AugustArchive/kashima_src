@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "description": "Schema for manifest.json for the Themes API",
+  "required": ["id", "name", "mainFile"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "The ID of the Theme (example: app.kashima.theme or kashima.theme)"
+    },
+    "name": {
+      "type": "string",
+      "description": "The full name of the Theme (example: My Theme)"
+    },
+    "version": {
+      "type": "string",
+      "description": "The version of the theme"
+    },
+    "mainFile": {
+      "type": "string",
+      "description": "The main file to load the theme"
+    },
+    "repository": {
+      "type": "string",
+      "description": "URL to the theme's repository"
+    },
+    "preprocessor": {
+      "type": "string",
+      "description": "Which preprocessor to compile from",
+      "enum": ["css", "sass"],
+      "default": "css"
+    },
+    "author": {
+      "type": "string",
+      "description": "The author of the theme"
+    },
+    "contributors": {
+      "type": "array",
+      "description": "An array of contributors",
+      "items": {
+        "type": ["string", "object"],
+        "properties": {
+          "name": { 
+            "type": "string",
+            "description": "The name of the contributor"
+          },
+          "email": { 
+            "type": "string",
+            "description": "The contributor's email" 
+          }
+        }
+      }
+    },
+    "website": {
+      "type": "string",
+      "description": "The URL to any website that links with your theme"
+    }
+  }
+}

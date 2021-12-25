@@ -1,0 +1,7 @@
+test/credentials.json
+node_modules/
+src/config.json
+build/
+
+package-lock.json
+yarn.lock

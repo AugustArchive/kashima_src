@@ -1,0 +1,22 @@
+name: Check for miscellaneous errors or warnings
+on: [pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # Only test in Node 10, 12, and 13
+        node-version: [10.x, 12.x, 13.x] 
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+      - name: Setup Node.js v${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install all global dependencies
+        run: npm i -g eslint
+      - name: Install all local dependencies
+        run: npm i
+      - name: Lint the repository
+        run: eslint src --ext .ts --fix
